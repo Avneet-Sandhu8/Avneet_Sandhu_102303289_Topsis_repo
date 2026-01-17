@@ -10,7 +10,6 @@ import numpy as np
 
 def main():
 
-
     # Step 0: Check number of inputs
 
     if len(sys.argv) != 5:
@@ -69,7 +68,7 @@ def main():
     weights = np.array(list(map(float, weights)))
 
 
-    # Step 1 (PDF): Convert categorical to numeric
+    # Step 1 : Convert categorical to numeric
 
     alternatives = df.iloc[:, 0]
     X = df.iloc[:, 1:]
@@ -133,3 +132,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
