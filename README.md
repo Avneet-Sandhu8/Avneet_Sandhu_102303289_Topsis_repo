@@ -67,7 +67,7 @@ Higher score = better rank
 
 ---
 
-## 4. How to Run the Program ⚙️
+## 4. How to Run the Program 
 
 ### Command:
 ```bash
@@ -103,13 +103,13 @@ The program generates `output.csv` containing:
 
 The program includes comprehensive error handling:
 
-- ✅ Correct number of parameters
-- ✅ File not found handling
-- ✅ Minimum 3 columns check
-- ✅ Numeric value validation
-- ✅ Weights & impacts length check
-- ✅ Impacts must be `+` or `-`
-- ✅ Proper error messages
+-  Correct number of parameters
+-  File not found handling
+-  Minimum 3 columns check
+-  Numeric value validation
+-  Weights & impacts length check
+-  Impacts must be `+` or `-`
+-  Proper error messages
 
 ---
 
