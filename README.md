@@ -42,6 +42,15 @@ The dataset contains **8 mobile phones** (M1 to M8) and their performance on dif
 | M8        | 0.92 | 0.85 | 5.3 | 36.5 | 10.89 |
 
 ---
+## Input File Requirements
+
+- File must be in CSV format
+- First column should contain object/alternative names
+- Must have at least 3 columns (1 for names + 2 or more criteria)
+- All criteria values must be numeric
+- No missing values allowed
+
+---
 
 ## 3. Methodology
 
