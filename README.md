@@ -5,7 +5,7 @@ TOPSIS implementation using Python (command line program)
 **Name:** Avneet Sandhu  
 **Roll No:** 102303289  
 **Course:** Predictive Analytics  
-**Assignment:** TOPSIS – Part I
+**Assignment:** TOPSIS 
 
 ---
 
