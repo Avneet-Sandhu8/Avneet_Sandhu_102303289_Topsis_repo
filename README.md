@@ -26,13 +26,20 @@ This project implements the TOPSIS (Technique for Order Preference by Similarity
 
 The dataset contains **8 mobile phones** (M1 to M8) and their performance on different parameters (P1 to P5).
 
-### Input File (`data.csv`) Format:
+# Example Dataset
+
+### Input File: `data.csv`
 
 | Fund Name | P1   | P2   | P3  | P4   | P5    |
 |-----------|------|------|-----|------|-------|
 | M1        | 0.88 | 0.77 | 3.3 | 49.9 | 13.71 |
 | M2        | 0.61 | 0.37 | 4.1 | 63.8 | 17.22 |
-| ...       | ...  | ...  | ... | ...  | ...   |
+| M3        | 0.68 | 0.46 | 5.8 | 55.7 | 15.66 |
+| M4        | 0.65 | 0.42 | 3.5 | 34.7 | 9.82  |
+| M5        | 0.93 | 0.86 | 5.0 | 55.3 | 15.52 |
+| M6        | 0.91 | 0.83 | 3.2 | 50.6 | 13.89 |
+| M7        | 0.91 | 0.83 | 4.6 | 64.3 | 17.66 |
+| M8        | 0.92 | 0.85 | 5.3 | 36.5 | 10.89 |
 
 ---
 
@@ -88,14 +95,23 @@ The program generates `output.csv` containing:
 - **Topsis Score** - Calculated performance score
 - **Rank** - Ranking based on score
 
-### Sample Output:
+### Output File: `output.csv`
 
-| Fund Name | Topsis Score | Rank |
-|-----------|--------------|------|
-| M3        | 0.69         | 1    |
-| M4        | 0.53         | 2    |
-| M1        | 0.53         | 3    |
-| ...       | ...          | ...  |
+| Fund Name | P1   | P2   | P3  | P4   | P5    | Topsis Score | Rank |
+|-----------|------|------|-----|------|-------|--------------|------|
+| M1        | 0.88 | 0.77 | 3.3 | 49.9 | 13.71 | 0.475101     | 7    |
+| M2        | 0.61 | 0.37 | 4.1 | 63.8 | 17.22 | 0.522999     | 4    |
+| M3        | 0.68 | 0.46 | 5.8 | 55.7 | 15.66 | 0.588975     | 3    |
+| M4        | 0.65 | 0.42 | 3.5 | 34.7 | 9.82  | 0.239258     | 8    |
+| M5        | 0.93 | 0.86 | 5.0 | 55.3 | 15.52 | 0.668589     | 2    |
+| M6        | 0.91 | 0.83 | 3.2 | 50.6 | 13.89 | 0.49709      | 6    |
+| M7        | 0.91 | 0.83 | 4.6 | 64.3 | 17.66 | 0.700458     | 1    |
+| M8        | 0.92 | 0.85 | 5.3 | 36.5 | 10.89 | 0.507755     | 5    |
+
+### Result Summary:
+
+- **Best Alternative:** M7 (Rank 1, Score: 0.700458)
+- **Worst Alternative:** M4 (Rank 8, Score: 0.239258)
 
 ---
 
