@@ -19,18 +19,89 @@
 
 ## Project Overview
 
-This project contains:
-1. **Python Package** - Command-line tool for TOPSIS calculation
-2. **Jupyter Notebook** - Detailed implementation with step-by-step explanation
-3. **Sample Dataset** - Mobile phone comparison data
+This project provides **THREE** ways to use TOPSIS:
+
+1. **Web Application** - Beautiful web interface for TOPSIS calculation
+2. **Python Package (PyPI)** - Command-line tool for TOPSIS
+3. **Jupyter Notebook** - Detailed implementation with step-by-step explanation
+
+---
+
+## TOPSIS Web Service (Live Demo)
+
+### 🔗 Live Application
+**Access here:** [(http://127.0.0.1:5000/)]  
+*(Replace with your Render/Vercel/Replit link)*
+
+### ✨ Features
+- Beautiful pink-themed user interface
+- Upload CSV files for analysis
+- Real-time TOPSIS calculation
+- Visual results table with ranking
+- Download results as CSV
+- Optional email delivery of results
+- Comprehensive input validation
+
+###  Screenshots
+
+#### Home Page
+![Web Service Home](screenshots/homepage.png)
+*Beautiful and intuitive interface for TOPSIS calculation*
+
+#### Results Display
+![Results Page](screenshots/results.png)
+*Clear visualization of TOPSIS scores and rankings with color-coded rank badges*
+
+### How to Use Web Service
+
+1. **Upload CSV File** - Click to browse or drag & drop your data file
+2. **Enter Weights** - Comma-separated weights (e.g., `1,1,1,2`)
+3. **Enter Impacts** - Comma-separated impacts (e.g., `+,+,-,+`)
+4. **Calculate** - Click the button to get results
+5. **Download** - Save results as CSV file
+
+---
+
+## PyPI Package Installation
+
+The package is available on PyPI for command-line usage:
+
+```bash
+pip install Topsis-Avneet-102303289
+```
+
+### PyPI Package Link
+**Install from:** [https://pypi.org/project/Topsis-Avneet-102303289/](https://pypi.org/project/Topsis-Avneet-102303289/)
+
+### Usage
+
+```bash
+topsis <InputDataFile> <Weights> <Impacts> <ResultFileName>
+```
+
+### Example Command
+
+```bash
+topsis data.csv 0.2,0.2,0.2,0.2,0.2 -,+,+,+,+ output.csv
+```
+
+**Arguments:**
+- `InputDataFile`: CSV file containing the decision matrix
+- `Weights`: Comma-separated weights for each criterion
+- `Impacts`: Comma-separated impacts (`+` for beneficial, `-` for non-beneficial)
+- `ResultFileName`: Output CSV file name
 
 ---
 
 ## Repository Structure
 
 ```
+Avneet_Sandhu_102303289_Topsis_repo/
+├── screenshots/                                 # Web service screenshots
+│   ├── homepage.png
+│   └── results.png
 ├── topsis.py                                    # Main Python implementation
-├── TOPSIS_Assignment_Avneet_102303289.ipynb    # Jupyter notebook with detailed steps
+├── TOPSIS_Assignment_Avneet_102303289.ipynb    # Jupyter notebook
 ├── data.csv                                     # Input dataset
 ├── output.csv                                   # Results after TOPSIS
 ├── Topsis-Avneet-102303289.zip                 # Package distribution
@@ -50,18 +121,29 @@ Data Collection → Data Pre-Processing → Weight Assignment → TOPSIS Calcula
 ### TOPSIS Steps:
 
 1. **Normalization**: Convert decision matrix to normalized form using vector normalization
+   ```
+   r_ij = x_ij / √(Σx_ij²)
+   ```
+
 2. **Weighted Normalization**: Multiply normalized values by their respective weights
+   ```
+   v_ij = w_j × r_ij
+   ```
+
 3. **Ideal Solutions**: 
-   - Ideal Best (A⁺): Best values for each criterion
-   - Ideal Worst (A⁻): Worst values for each criterion
+   - **Ideal Best (A⁺)**: Best values for each criterion based on impact
+   - **Ideal Worst (A⁻)**: Worst values for each criterion based on impact
+
 4. **Distance Calculation**: 
-   - Calculate Euclidean distance from Ideal Best (S⁺)
-   - Calculate Euclidean distance from Ideal Worst (S⁻)
+   - Distance from Ideal Best: `S⁺ = √(Σ(v_ij - v_j⁺)²)`
+   - Distance from Ideal Worst: `S⁻ = √(Σ(v_ij - v_j⁻)²)`
+
 5. **Performance Score**: 
    ```
    TOPSIS Score = S⁻ / (S⁺ + S⁻)
    ```
-6. **Ranking**: Rank alternatives in descending order of TOPSIS score
+
+6. **Ranking**: Rank alternatives in descending order of TOPSIS score (higher score = better rank)
 
 ---
 
@@ -76,36 +158,7 @@ The notebook includes:
 - Mathematical formulas for each step
 - Visualization of results
 - Detailed explanation of the TOPSIS algorithm
-
----
-
-## Command Line Tool Usage
-
-### Installation from PyPI
-
-The package is available on PyPI and can be installed using pip:
-
-```bash
-pip install Topsis-Avneet-102303289
-```
-
-### Usage
-
-```bash
-topsis <InputDataFile> <Weights> <Impacts> <ResultFileName>
-```
-
-### Example Command
-
-```bash
-topsis data.csv 0.2,0.2,0.2,0.2,0.2 -,+,+,+,+ output.csv
-```
-
-**Arguments:**
-- `InputDataFile`: CSV file containing the decision matrix
-- `Weights`: Comma-separated weights for each criterion
-- `Impacts`: Comma-separated impacts (`+` for beneficial, `-` for non-beneficial)
-- `ResultFileName`: Output CSV file name
+- Code comments and documentation
 
 ---
 
@@ -129,7 +182,7 @@ topsis data.csv 0.2,0.2,0.2,0.2,0.2 -,+,+,+,+ output.csv
 
 ---
 
-## 📈 Results
+## Results
 
 ### Output: `output.csv`
 
@@ -145,7 +198,7 @@ topsis data.csv 0.2,0.2,0.2,0.2,0.2 -,+,+,+,+ output.csv
 | M4        | 0.65 | 0.42 | 3.5 | 34.7 | 9.82  | 0.239258     | 8    |
 
 ### Result Summary
-- **Best Alternative:** M7 (Score: 0.700458)
+- **Best Alternative:** M7 (Score: 0.700458) 
 - **Worst Alternative:** M4 (Score: 0.239258)
 
 ---
@@ -178,7 +231,112 @@ The package includes comprehensive validation:
 
 ---
 
-## Links
+## Links & Resources
+
+### Web Application
+**Live Demo:** [YOUR_DEPLOYED_LINK_HERE]  
+*(Beautiful web interface for TOPSIS calculation)*
 
 ### PyPI Package
 **Install from:** [https://pypi.org/project/Topsis-Avneet-102303289/](https://pypi.org/project/Topsis-Avneet-102303289/)
+
+### GitHub Repository
+**Source Code:** [https://github.com/Avneet-Sandhu8/Avneet_Sandhu_102303289_Topsis_repo](https://github.com/Avneet-Sandhu8/Avneet_Sandhu_102303289_Topsis_repo)
+
+---
+
+## Quick Start Guide
+
+### Method 1: Use Web Application (Easiest)
+1. Visit the [live web app](YOUR_DEPLOYED_LINK_HERE)
+2. Upload your CSV file
+3. Enter weights and impacts
+4. Click "Calculate TOPSIS"
+5. Download results
+
+### Method 2: Use PyPI Package
+```bash
+pip install Topsis-Avneet-102303289
+topsis data.csv 1,1,1,2 +,+,-,+ result.csv
+```
+
+### Method 3: Run Jupyter Notebook
+1. Clone this repository
+2. Open `TOPSIS_Assignment_Avneet_102303289.ipynb`
+3. Run all cells
+
+---
+
+## Screenshots
+
+### Web Service Interface
+
+#### 1. Homepage - Input Form
+![Homepage](screenshots/homepage.png)
+
+Features shown:
+- Clean, modern pink-themed design
+- File upload with drag & drop
+- Weights and impacts input fields
+- Optional email functionality
+- Sample CSV download
+
+#### 2. Results Display
+![Results](screenshots/results.png)
+
+Features shown:
+- Comprehensive results table
+- TOPSIS scores with 6 decimal precision
+- Color-coded ranking badges (Gold, Silver, Bronze)
+- Download results button
+- Clear visualization
+
+---
+
+## Technologies Used
+
+### Web Application
+- **Frontend:** HTML5, CSS3, JavaScript
+- **Backend:** Python Flask
+- **Styling:** Custom CSS with gradients and animations
+- **Libraries:** Pandas, NumPy
+
+### PyPI Package
+- **Language:** Python 3.6+
+- **Dependencies:** Pandas, NumPy
+
+---
+
+## License
+
+MIT License
+
+---
+
+## Author
+
+**Avneet Sandhu**  
+Roll Number: 102303289  
+Course: Predictive Analytics  
+Group: 3C22  
+Institution: Thapar Institute of Engineering and Technology
+
+---
+
+## Contact
+
+For queries, suggestions, or feedback:
+- Email: avneetsandhu719@gmail.com
+- GitHub: [@Avneet-Sandhu8](https://github.com/Avneet-Sandhu8)
+
+---
+
+
+
+<div align="center">
+
+
+
+**Made with by Avneet Sandhu**
+
+</div>
