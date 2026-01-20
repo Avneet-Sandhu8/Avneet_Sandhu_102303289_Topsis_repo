@@ -18,11 +18,16 @@
 <label>Impacts:</label><br>
 <input type="text" id="impacts" placeholder="+,+,-,+,+"><br><br>
 
+<input type="checkbox" id="sendEmail">
+<label for="sendEmail">Send results to email (optional)</label><br><br>
+
+<input type="email" id="email" placeholder="Enter email" style="display:none;"><br><br>
+
 <button onclick="calculate()">Calculate TOPSIS</button>
 
 <div id="result" style="margin-top:20px;"></div>
-<pre id="result"></pre>
 
 <script src="script.js"></script>
 </body>
 </html>
+
