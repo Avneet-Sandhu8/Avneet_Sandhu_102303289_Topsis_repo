@@ -11,10 +11,6 @@
 
 **TOPSIS** (Technique for Order Preference by Similarity to Ideal Solution) is a Multi-Criteria Decision Making (MCDM) method that helps in ranking alternatives based on their similarity to the ideal best solution and distance from the ideal worst solution.
 
-### Key Concept:
-- The best alternative should have the **shortest distance** from the ideal best solution
-- The best alternative should have the **farthest distance** from the ideal worst solution
-
 ---
 
 ## Project Overview
@@ -29,11 +25,10 @@ This project provides **THREE** ways to use TOPSIS:
 
 ## TOPSIS Web Service (Live Demo)
 
-### 🔗 Live Application
+### Live Application
 **Access here:** [(http://127.0.0.1:5000/)]  
-*(Replace with your Render/Vercel/Replit link)*
 
-### ✨ Features
+### Features
 - Beautiful pink-themed user interface
 - Upload CSV files for analysis
 - Real-time TOPSIS calculation
@@ -45,18 +40,18 @@ This project provides **THREE** ways to use TOPSIS:
 ###  Screenshots
 
 #### Home Page
-![Web Service Home](screenshots/homepage.png)
+![Web Service Home](homepage.png)
 *Beautiful and intuitive interface for TOPSIS calculation*
 
 #### Results Display
-![Results Page](screenshots/results.png)
+![Results Page](results.png)
 *Clear visualization of TOPSIS scores and rankings with color-coded rank badges*
 
 ### How to Use Web Service
 
 1. **Upload CSV File** - Click to browse or drag & drop your data file
-2. **Enter Weights** - Comma-separated weights (e.g., `1,1,1,2`)
-3. **Enter Impacts** - Comma-separated impacts (e.g., `+,+,-,+`)
+2. **Enter Weights** - Comma-separated weights (e.g., `1,1,1,2,1`)
+3. **Enter Impacts** - Comma-separated impacts (e.g., `+,+,-,+,-`)
 4. **Calculate** - Click the button to get results
 5. **Download** - Save results as CSV file
 
@@ -234,8 +229,7 @@ The package includes comprehensive validation:
 ## Links & Resources
 
 ### Web Application
-**Live Demo:** [YOUR_DEPLOYED_LINK_HERE]  
-*(Beautiful web interface for TOPSIS calculation)*
+**Live Demo:** [(http://127.0.0.1:5000/)]  
 
 ### PyPI Package
 **Install from:** [https://pypi.org/project/Topsis-Avneet-102303289/](https://pypi.org/project/Topsis-Avneet-102303289/)
@@ -272,17 +266,11 @@ topsis data.csv 1,1,1,2 +,+,-,+ result.csv
 ### Web Service Interface
 
 #### 1. Homepage - Input Form
-![Homepage](screenshots/homepage.png)
+![Homepage](homepage.png)
 
-Features shown:
-- Clean, modern pink-themed design
-- File upload with drag & drop
-- Weights and impacts input fields
-- Optional email functionality
-- Sample CSV download
 
 #### 2. Results Display
-![Results](screenshots/results.png)
+![Results](results.png)
 
 Features shown:
 - Comprehensive results table
@@ -307,12 +295,6 @@ Features shown:
 
 ---
 
-## License
-
-MIT License
-
----
-
 ## Author
 
 **Avneet Sandhu**  
@@ -331,12 +313,6 @@ For queries, suggestions, or feedback:
 
 ---
 
-
-
 <div align="center">
-
-
-
-**Made with by Avneet Sandhu**
 
 </div>
